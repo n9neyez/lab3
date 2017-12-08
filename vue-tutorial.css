@@ -1,0 +1,133 @@
+
+@font-face {
+font-family: 'vertigo';
+src: url(fonts/vertigo/vertigo.eot); /* IE9 Compat Modes */
+src: url(fonts/vertigo/vertigo.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+    url(fonts/vertigo/vertigo.woff2) format('woff2'), /* Super Modern Browsers */
+    url(fonts/vertigo/vertigo.woff) format('woff'), /* Pretty Modern Browsers */
+    url(fonts/vertigo/vertigo.ttf)  format('truetype'), /* Safari, Android, iOS */
+    url(fonts/vertigo/vertigo.svg#svgFontName) format('svg'); /* Legacy iOS */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    background-color: rgba(190, 190, 190, 0.8);
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+#main-container {
+    height: 100%;
+    width: 1000px;
+    margin: auto;
+    background-color: rgba(33, 104, 68, 0.75);
+}
+#heading-content {
+    height: 250px;
+    width: 800px;
+    position: absolute;
+    color: white;
+    z-index: 1; font-family: 'vertigo';
+}
+#display-heading {
+    background: url(https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png);
+    background-size: cover;
+    filter: blur(2px);
+    height: 250px;
+    width: 100%;
+    z-index: 0;
+}
+#heading-row {
+    width: 100%;
+    height: 225px;
+    margin-bottom: 50px;
+}
+.content-rows {
+    width: 100%;
+    margin-bottom: 50px;
+}
+footer {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 900px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+#intro-text {
+    text-align: right;
+    margin-right: -175px;
+    margin-top: -30px;
+    font-size: 1.85em;
+}
+#lab-info {
+    text-align: right;
+    margin-right: -175px;
+    margin-top: 60px;
+    font-size: 1.25em;
+}
+#vue-logo {
+    background: url(https://cdn.worldvectorlogo.com/logos/vue-9.svg);
+    background-size: cover;
+    height: 190px;
+    width: 220px;
+    margin: 30px 0px 0px 30px;
+    
+}
+.left-col {
+    width: 50%;
+    float: left;
+}
+.right-col {
+    width: 50%;
+    float: right;
+}
+.welcome {
+    text-indent: 40px;
+    font-size: 1.25em;
+}
+.section-title {
+    font-family: 'vertigo';
+    color: #0A092C;
+    font-size: 2.75em;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    border-bottom: 3px solid #0A092C;
+    display: inline;
+    margin-left: 30px;
+}
+.text-container {
+    margin: auto;
+    width: 75%;
+}
+.tutorial-text {
+    font-size: 1.10em;
+}
+.app-explain {
+    margin-top: 20px;
+}
+.vertigo-font {
+    font-family: 'vertigo';
+    font-size: 2.25em;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#app-img {
+    margin-left: 50px;
+}
+strong {
+    color: yellow;
+}
+.footer-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+a {
+    color: yellow;
+    font-weight: bolder;
+    font-style: italic;
+}

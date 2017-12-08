@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue Intro - Lab3</title>
+        <meta name="description" content="Vue Introduction Tutorials - Lab 3">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="vue-tutorial.css">
+    </head>
+    <body>
+        <div id="main-container">
+        <!-- Heading for the page -->
+            <div id="heading-content">
+                <div class="right-col">
+                    <div id="intro-text">
+                            <h1>Vue Introduction Tutorials</h1>
+                    </div>
+                    <div id="lab-info">
+                        <h1>
+                            Lab 3 <br />
+                            CWEB1111-01
+                        </h1>
+                    </div>
+                </div>
+            <!-- LOGO -->
+                <div class="left-col">
+                    <div id="vue-logo">
+                    </div>
+                </div>
+            </div>
+
+                <section id="display-heading">
+                </section>
+            
+        <!-- Main Content -->
+            <section id="heading-row">
+                <div class="text-container">
+                    <p class="welcome">
+                        Welcome, this webpage is designed for Programming Fundamentals 2 at
+                        Dunwoody College of Technolody (Lab 3). In this lab, NodeJS was installed
+                        and using a Git Bash terminal, Vue.js was also installed via Node Package 
+                        Manager and as a direct js file. This webpage is a sort of introduction to
+                        Vue.js with almost identical information taken from Vue's website.
+                    </p>
+                    <p id="welcome">
+                        Vue 2.5.9, Node v8.9.1, NPM 5.5.1,
+                        <img src="https://cdn.worldvectorlogo.com/logos/npm.svg" alt="npm"
+                            width="100" />
+                    </p>
+                </div>
+            </section>
+            <section class="content-rows">
+                <div class="section-title">
+                    Declarative Rendering
+                </div>
+                <div class="text-container">
+                    <div class="app-explain">
+                        <p>
+                            Vue at the core, enables users to declaratively render data to the <i>DOM (Document
+                            Object Model)</i> using template syntax.
+                        </p>    
+                    <br />
+                    <div id="app-img">
+                        <img src="images/app-html.png" alt="app-html-code" />
+                        <img src="images/app-script.png" alt="app-script-code" />
+                    </div>
+                    <div id="app" class="vertigo-font">
+                            {{message}}
+                    </div>
+
+                        <p>
+                            Here, Vue can call the text "What's Up?" from within a data object
+                            in a Vue instance. The data and DOM are linked now and is reactive.
+                            We can test this using our browser's JavaScript console; setting
+                            <strong>app.message = "any text"</strong> will change the the above text accordingly.
+                        </p>
+                        <p>
+                            We can also bind element attributes with a directive: <strong>v-bind</strong>. Directives
+                            are always prefixed with <strong>-v</strong> to show they are provided by Vue, these 
+                            directives apply reactive behavior to the rendered DOM. 
+                        </p>
+                        <br />
+                        <div id="app-img">
+                            <img src="images/app2-html.png" alt="app-html-code" />
+                            <img src="images/app2-script.png" alt="app-script-code" />
+                        </div>
+                        <div id="app-2" class="vertigo-font">
+                            <span v-bind:title="message">
+                                Hover over this text to see how Vue interacts
+                                with element attributes.
+                            </span>
+                        </div>
+                        <p>
+                            The span element's <strong>title</strong> attribute is kept up-to-date with the message
+                            property on the Vue instance (<strong>app2</strong>). Opening the console, we can enter
+                            <strong>app2.message = "some text..."</strong> and we can see the bound HTML, the <strong>title</strong>
+                            attribute will be updated.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-rows">
+                <div class="section-title">
+                    Conditionals &amp; Loops
+                </div>
+                <div class="text-container">
+                    <div class="app-explain">
+                        <p>
+                            Vue can also bind data to the structure of the DOM. Below, using <strong>v-if</strong>
+                            we can easily toggle to see or hide an element.
+                        </p>
+                        <br />
+                        <div id="app-img">
+                            <img src="images/app3-html.png" alt="app-html-code" />
+                            <img src="images/app3-script.png" alt="app-script-code" />
+                        </div>
+                        <div id="app-3" class="vertigo-font">
+                            <span v-if="seen">Now you see me</span>
+                        </div>
+                        <div class="app-explain">
+                            <p>
+                                Using the console, or changing the value of <strong>seen</strong> within the Vue instance
+                                we can change <strong>app3.seen = false</strong> to  hide the above element/text.
+                            </p>
+                            <p>
+                                The v-for directive, we can display a list of items from
+                                an array. In the console, type <strong>app4.todos.push({ text: 'New Item'})</strong> 
+                                and a new item will be appended to the list.
+                            </p>
+                            <br />
+                            <div id="app-img">
+                                    <img src="images/app4-html.png" alt="app-html-code" />
+                                    <img src="images/app4-script.png" alt="app-script-code"
+                                        width="300" />
+                            </div>
+                            <div id="app-4" class="vertigo-font">
+                                <ol>
+                                    <li v-for="todo in todos">
+                                        {{ todo.text }}
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-rows">
+                <div class="section-title">
+                    User Input
+                </div>
+                <div class="text-container">
+                    <div class="app-explain">
+                        <p>
+                            Vue lets users interact with an app with the <strong>v-on</strong> directive 
+                            , which essentially puts event listeners that invoke methods on Vue instances.
+                        </p>
+                        <br />
+                        <div id="app-img">
+                            <img src="images/app5-html.png" alt="app-html-code" />
+                            <img src="images/app5-script.png" alt="app-script-code" />
+                        </div>
+                        <div id="app-5" class="vertigo-font">
+                                <p>{{ message }}</p>
+                                <button v-on:click="reverseMessage">Reverse Message</button>
+                              </div>
+                        <div class="app-explain">
+                            <p>
+                                We are updating the state of our app without touching the DOM in this mehtod.
+                            </p>
+                                <br />
+                            <p>
+                                Two-way binding between form input and app are made easy using the <strong>v-model</strong>
+                                directive.
+                            </p>
+                            <br />
+                            <div id="app-img">
+                                    <img src="images/app6-html.png" alt="app-html-code" />
+                                    <img src="images/app6-script.png" alt="app-script-code"
+                                        width="300" />
+                            </div>
+                            <div id="app-6" class="vertigo-font">
+                                <p>{{ message }}</p>
+                                <input v-model="message">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <!-- FOOTER, not contained -->
+        <footer>
+            <div class="left-col">
+                <div class="footer-content">
+                    Vue components are not covered in the above tutorials.
+                    <br /> <br />
+                    All information is directy from <i>https://vuejs.org</i> <br />
+                    <br />
+                    Lab 3, CWEB1111-01 Programming Fundamentals II
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="footer-content">
+                    For the original introduction visit: <br /><br />
+                    <a href="https://vuejs.org/v2/guide/" target="_blank">
+                        https://vuejs.org/v2/guide/</a> <br />
+                    <br />
+                    2017
+                </div>
+            </div>
+        </footer>
+
+        <script src="vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: "What's Up?"
+                }
+            })
+
+            var app2 = new Vue({
+                el: '#app-2',
+                data: {
+                    message: "You loaded this page on " + new Date().toLocaleString()
+                }
+            })
+
+            var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+            })
+
+            var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos: [
+                { text: 'Learn JavaScript' },
+                { text: 'Learn Vue' },
+                { text: 'Build something awesome' }
+                ]
+            }
+            })
+
+            var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+                }
+            }
+            })
+            var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Type something!'
+            }
+            })
+        </script>
+    </body>
+</html>
